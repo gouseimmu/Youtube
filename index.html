@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/00bdcd0352.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        #results{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+        }
+        i{
+            height: 30px;
+            width: 50px;
+            margin-left: 30px;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        #you{
+            height: 30%;
+            width: 20%;
+
+        }
+        #nav{
+            width: 50%;
+             
+            display: flex;
+            justify-content: space-between;
+        }
+        #query{
+            margin-left: 500px;
+            border: 1px solid;
+            padding: 10px;
+             width:  280px
+        }
+        button{
+            margin-left: 20px;
+            padding: 10px;
+             padding-left: 10px;
+            border: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <img id="you" src="https://www.seekpng.com/png/detail/77-772362_youtube-logo-youtube-logo-png.png" alt="">
+    
+    <input type="text" id="query" placeholder="Search"/>
+    <button onclick="search()">Search</button>
+    <i class="fa-solid fa-microphone"></i>
+</div>
+    <div id="results"></div>
+</body>
+</html>
+<script src="index.js"></script>

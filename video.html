@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <div id="card"></div>
+    
+</body>
+</html>
+<script>
+
+//     let video1=JSON.parse(localStorage.getItem("video"))
+//     console.log(video1)
+//     display(video1);
+//     function display(video1){
+//         let card = document.getElementById("card")
+//     video1.forEach(function({id:{videoId},snippet:{title}}){
+//         // console.log(videoId)
+//         // // console.log(title)
+//         let div1 = document.createElement("div");
+//         // let image = document.createElement("img")
+//         // image.src=thumbnails.default.url
+//         let iframe = document.createElement("iframe");
+//         iframe.src= `https://www.youtube.com/embed/${videoId}`;
+//         iframe.allow="fullscreen"
+//         let h=document.createElement("h3");
+//         h.innerText=title;
+
+//         // div.append(image,h3);
+//         // let video1 ={
+//         //     title,
+//         //     videoId,
+//         // };
+//         // div.onclick = () => {
+//         //     playVideo(video1);
+//         // }
+//         // container.append(div);
+//         div1.append(iframe,h)
+//         document.getElementById("card").append(div1)
+//     })
+// }
+// display(video1)
+
+
+
+let video1 = JSON.parse(localStorage.getItem("video"))
+ display(video1)
+ 
+
+function display(video1){
+    console.log(video1)
+    
+        let card = document.getElementById("card")
+        let div1 = document.createElement("div");
+        let iframe = document.createElement("iframe");
+        iframe.src= `https://www.youtube.com/embed/${video1.videoId}`;
+         iframe.allow="fullscreen"
+         let h=document.createElement("h3");
+         h.innerText=video1.title;
+
+         div1.append(iframe,h);
+         card.append(div1)
+     
+}
+ </script>
